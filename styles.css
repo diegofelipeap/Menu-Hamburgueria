@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url("./img/background.gif") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+.navigation {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    background-color: #d4ed18;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+    font-size: 30px;
+    width: 190px;
+    height: 110px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+button:hover {
+    box-shadow: 0 0 10px #8133ff;
+    opacity: 0.9;
+}
+
+button:active {
+    background-color: rgb(233, 199, 7);
+    box-shadow: 0 0 10px gold;
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    gap: 20px;
+}
+
+li:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+
+img {
+    width: 100%;
+    border: 2px solid #8133ff;
+    border-radius: 4px;
+}
+
+p {
+    color: white;
+    margin-top: 7px;
+    text-align: center;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #d4ed18;
+}
+
+#total-result {
+    border: 2px solid #8133ff;
+    box-shadow: 0 0 10px #8133ff;
+    text-align: left;
+    border-radius: 4px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 35px;
+    display: flex;
+    position: relative;
+    left: 210px;
+}
+
+@media screen and (max-width: 900px) {
+
+    
+    body{
+        overflow-x: hidden;
+    }
+    .navigation {
+        display: grid;
+        grid-template-columns: 200px 200px;
+        gap: 5px;
+    }
+
+    button {
+        font-size: 15px;
+        width: 190px;
+        height: 40px;
+        position: sticky;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    img, img:active{
+        max-width: 40vh;
+        scale: 0.9;
+    }
+    #total-result {
+        text-align: center;
+        font-size: 30px;
+        display: flex;
+        position: static;
+    }
+   
+}
